@@ -1,5 +1,5 @@
 let sketchingBoard = document.querySelector('.sketchBoard')
-let colorSelector = document.querySelector('#selectColor');
+let colorSelector = document.querySelector('#chooseColor');
 let clear = document.querySelector('#clearAll');
 let erase = document.querySelector('#eraser');
 
@@ -11,7 +11,7 @@ for (let i=0 ; i < 256 ; i++ ){
     cell.appendChild(document.createTextNode(''));
     sketchingBoard.appendChild(cell);
     cell.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = `${colorSelector}`;
+        e.target.style.backgroundColor = colorSelector.value;
         console.log(e)
     })
 } 
